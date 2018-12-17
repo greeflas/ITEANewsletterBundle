@@ -1,0 +1,11 @@
+services:
+  _default:
+    autowire: true
+    public: false
+
+ITEA\Bundle\NewsletterBundle\:
+  resource: '../../*'
+  exclude: '../../{DependencyInjection,Resources,Dto}'
+
+ITEA\Bundle\NewsletterBundle\Controller\DefaultController:
+  tags: ['controller.service_arguments']
